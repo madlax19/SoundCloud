@@ -1,0 +1,7 @@
+#!/bin/sh
+DIR=$(cd "$(dirname "$0")"; pwd)
+mogenerator --v2 \
+    --model "$DIR/SoundCloud.xcdatamodeld/SoundCloud.xcdatamodel" \
+    --machine-dir "$DIR/Machine" \
+    --human-dir "$DIR/Human" \
+    --swift
