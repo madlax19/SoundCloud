@@ -39,6 +39,10 @@ class SCRestKitManager: NSObject {
         let manager = RKObjectManager(baseURL: NSURL(string: baseURL))
         manager.requestSerializationMIMEType = RKMIMETypeJSON
         manager.managedObjectStore = managedObjectStore
+        
+        manager.addResponseDescriptor(RKResponseDescriptor(mapping: SCTracks.mappingInStore(managedObjectStore), method: .GET, pathPattern: Constaints.Path.trackPath, keyPath: "", statusCodes: RKStatusCodeIndexSetForClass(.Successful)))
+        
+        RKObjectManager.setSharedManager(manager)
 
     }
 }

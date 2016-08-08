@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>APP_SERVER</key>
-	<string>https://api.soundcloud.com</string>
+	<string>https://api.soundcloud.com/</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

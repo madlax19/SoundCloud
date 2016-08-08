@@ -10,11 +10,13 @@ import UIKit
 import RestKit
 
 class SCRequestHelper: NSObject {
-    class func registrationRequest(registration registration: SCRegistration, success: ((SCLogin)->())?, failed: (()->())?) {
-        RKObjectManager.sharedManager().postObject(registration, path: Constants.Pathes.RegistrationPath, parameters: nil, success: {
-            if let user = $1.array().first as? LLUser {
-                LLUser.setCurrentUser(user: user)
-                success?(user)
+    class func trackRequest(success: (([SCTracks])->())?, failed: (()->())?) {
+        let params = ["client_id" : Constaints.Path.clientId]
+        RKObjectManager.sharedManager().getObject(nil, path: Constaints.Path.trackPath, parameters: params, success: {
+            if let tracks = $1.array() as? [SCTracks] {
+                success?(tracks)
+            } else {
+                success?([SCTracks]())
             }
             }, failure: {
                 if $1 != nil {
@@ -22,5 +24,6 @@ class SCRequestHelper: NSObject {
                 }
         })
     }
+
 
 }

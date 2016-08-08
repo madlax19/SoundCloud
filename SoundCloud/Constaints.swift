@@ -11,5 +11,8 @@ import UIKit
 class Constaints: NSObject {
     struct Path {
         static let registration = ""
+        static let clientId = "7467688f360c6055fb679c3bd739acbc"
+        static let trackPath = "tracks"
+        static let streamPath = ""
     }
 }

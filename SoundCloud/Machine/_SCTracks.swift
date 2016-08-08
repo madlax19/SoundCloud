@@ -1,21 +1,21 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to SCLogin.swift instead.
+// Make changes to SCTracks.swift instead.
 
 import Foundation
 import CoreData
 
-public enum SCLoginAttributes: String {
-    case password = "password"
-    case userToken = "userToken"
-    case username = "username"
+public enum SCTracksAttributes: String {
+    case createdAt = "createdAt"
+    case streamUrl = "streamUrl"
+    case title = "title"
 }
 
-public class _SCLogin: NSManagedObject {
+public class _SCTracks: NSManagedObject {
 
     // MARK: - Class methods
 
     public class func entityName () -> String {
-        return "Login"
+        return "Tracks"
     }
 
     public class func entity(managedObjectContext: NSManagedObjectContext) -> NSEntityDescription? {
@@ -29,20 +29,20 @@ public class _SCLogin: NSManagedObject {
     }
 
     public convenience init?(managedObjectContext: NSManagedObjectContext) {
-        guard let entity = _SCLogin.entity(managedObjectContext) else { return nil }
+        guard let entity = _SCTracks.entity(managedObjectContext) else { return nil }
         self.init(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
     }
 
     // MARK: - Properties
 
     @NSManaged public
-    var password: String?
+    var createdAt: String?
 
     @NSManaged public
-    var userToken: NSNumber?
+    var streamUrl: String?
 
     @NSManaged public
-    var username: String?
+    var title: String?
 
     // MARK: - Relationships
 

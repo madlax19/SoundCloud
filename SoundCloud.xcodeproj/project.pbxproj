@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		259B097F1D54CDBD00DF5059 /* SCTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259B097C1D54CDBD00DF5059 /* SCTracks.swift */; };
+		259B09801D54CDBD00DF5059 /* _SCTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259B097E1D54CDBD00DF5059 /* _SCTracks.swift */; };
 		25D28FE11D5318F50025BF28 /* SCRestKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D28FE01D5318F50025BF28 /* SCRestKitManager.swift */; };
 		25D28FE31D5319090025BF28 /* SCRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D28FE21D5319090025BF28 /* SCRequestHelper.swift */; };
 		25D28FE71D531A2E0025BF28 /* SoundCloud.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25D28FE51D531A2E0025BF28 /* SoundCloud.xcdatamodeld */; };
-		25D28FEC1D531BE20025BF28 /* SCLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D28FE91D531BE20025BF28 /* SCLogin.swift */; };
-		25D28FED1D531BE20025BF28 /* _SCLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D28FEB1D531BE20025BF28 /* _SCLogin.swift */; };
-		25D28FF01D531E760025BF28 /* SCRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D28FEF1D531E760025BF28 /* SCRegistration.swift */; };
 		25D28FF31D5320A10025BF28 /* Constaints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D28FF21D5320A10025BF28 /* Constaints.swift */; };
 		25D858DF1D51E49D00BE883B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D858DE1D51E49D00BE883B /* AppDelegate.swift */; };
 		25D858E61D51E49E00BE883B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25D858E51D51E49E00BE883B /* Assets.xcassets */; };
@@ -20,16 +19,16 @@
 		25D858F11D51E4F300BE883B /* SCMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D858F01D51E4F300BE883B /* SCMainVC.swift */; };
 		25D858F31D51E51F00BE883B /* SCMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25D858F21D51E51F00BE883B /* SCMain.storyboard */; };
 		25D858F51D51E64400BE883B /* SCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D858F41D51E64400BE883B /* SCCell.swift */; };
+		25D89EA61D58BF7C00131BDB /* SCPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D89EA51D58BF7C00131BDB /* SCPlayerVC.swift */; };
 		6C913441837F96415265DA74 /* Pods_SoundCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3155CC9F3EAC82B1BBB682E1 /* Pods_SoundCloud.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		259B097C1D54CDBD00DF5059 /* SCTracks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCTracks.swift; sourceTree = "<group>"; };
+		259B097E1D54CDBD00DF5059 /* _SCTracks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _SCTracks.swift; sourceTree = "<group>"; };
 		25D28FE01D5318F50025BF28 /* SCRestKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRestKitManager.swift; sourceTree = "<group>"; };
 		25D28FE21D5319090025BF28 /* SCRequestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRequestHelper.swift; sourceTree = "<group>"; };
 		25D28FE61D531A2E0025BF28 /* SoundCloud.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SoundCloud.xcdatamodel; sourceTree = "<group>"; };
-		25D28FE91D531BE20025BF28 /* SCLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLogin.swift; sourceTree = "<group>"; };
-		25D28FEB1D531BE20025BF28 /* _SCLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _SCLogin.swift; sourceTree = "<group>"; };
-		25D28FEF1D531E760025BF28 /* SCRegistration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRegistration.swift; sourceTree = "<group>"; };
 		25D28FF21D5320A10025BF28 /* Constaints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constaints.swift; sourceTree = "<group>"; };
 		25D858DB1D51E49D00BE883B /* SoundCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25D858DE1D51E49D00BE883B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +38,7 @@
 		25D858F01D51E4F300BE883B /* SCMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMainVC.swift; sourceTree = "<group>"; };
 		25D858F21D51E51F00BE883B /* SCMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SCMain.storyboard; sourceTree = "<group>"; };
 		25D858F41D51E64400BE883B /* SCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCell.swift; sourceTree = "<group>"; };
+		25D89EA51D58BF7C00131BDB /* SCPlayerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPlayerVC.swift; sourceTree = "<group>"; };
 		3155CC9F3EAC82B1BBB682E1 /* Pods_SoundCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6732A684B6AE13508D097C /* Pods-SoundCloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloud.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoundCloud/Pods-SoundCloud.release.xcconfig"; sourceTree = "<group>"; };
 		F9E70326B850197335D1BA25 /* Pods-SoundCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundCloud.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoundCloud/Pods-SoundCloud.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +64,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		259B097B1D54CDBD00DF5059 /* Human */ = {
+			isa = PBXGroup;
+			children = (
+				259B097C1D54CDBD00DF5059 /* SCTracks.swift */,
+			);
+			path = Human;
+			sourceTree = "<group>";
+		};
+		259B097D1D54CDBD00DF5059 /* Machine */ = {
+			isa = PBXGroup;
+			children = (
+				259B097E1D54CDBD00DF5059 /* _SCTracks.swift */,
+			);
+			path = Machine;
+			sourceTree = "<group>";
+		};
 		25D28FE41D53190D0025BF28 /* RestKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,30 +87,6 @@
 				25D28FE01D5318F50025BF28 /* SCRestKitManager.swift */,
 			);
 			name = RestKit;
-			sourceTree = "<group>";
-		};
-		25D28FE81D531BE20025BF28 /* Human */ = {
-			isa = PBXGroup;
-			children = (
-				25D28FE91D531BE20025BF28 /* SCLogin.swift */,
-			);
-			path = Human;
-			sourceTree = "<group>";
-		};
-		25D28FEA1D531BE20025BF28 /* Machine */ = {
-			isa = PBXGroup;
-			children = (
-				25D28FEB1D531BE20025BF28 /* _SCLogin.swift */,
-			);
-			path = Machine;
-			sourceTree = "<group>";
-		};
-		25D28FEE1D531E4C0025BF28 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				25D28FEF1D531E760025BF28 /* SCRegistration.swift */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 		25D28FF11D5320810025BF28 /* Constaints */ = {
@@ -126,21 +118,53 @@
 		25D858DD1D51E49D00BE883B /* SoundCloud */ = {
 			isa = PBXGroup;
 			children = (
-				25D858DE1D51E49D00BE883B /* AppDelegate.swift */,
+				25D89EA91D58BFE900131BDB /* Delegate */,
 				25D28FF11D5320810025BF28 /* Constaints */,
 				25D858E51D51E49E00BE883B /* Assets.xcassets */,
 				25D28FE41D53190D0025BF28 /* RestKit */,
-				25D858F01D51E4F300BE883B /* SCMainVC.swift */,
-				25D28FE81D531BE20025BF28 /* Human */,
-				25D28FEA1D531BE20025BF28 /* Machine */,
-				25D858F21D51E51F00BE883B /* SCMain.storyboard */,
+				25D89EA81D58BFDD00131BDB /* Storyboard */,
+				25D89EA41D58BF5500131BDB /* ViewController */,
+				259B097B1D54CDBD00DF5059 /* Human */,
+				259B097D1D54CDBD00DF5059 /* Machine */,
+				25D89EAA1D58BFFB00131BDB /* Cell */,
 				25D28FE51D531A2E0025BF28 /* SoundCloud.xcdatamodeld */,
-				25D28FEE1D531E4C0025BF28 /* Classes */,
-				25D858F41D51E64400BE883B /* SCCell.swift */,
-				25D858E71D51E49E00BE883B /* LaunchScreen.storyboard */,
 				25D858EA1D51E49E00BE883B /* Info.plist */,
 			);
 			path = SoundCloud;
+			sourceTree = "<group>";
+		};
+		25D89EA41D58BF5500131BDB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				25D89EA51D58BF7C00131BDB /* SCPlayerVC.swift */,
+				25D858F01D51E4F300BE883B /* SCMainVC.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		25D89EA81D58BFDD00131BDB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				25D858E71D51E49E00BE883B /* LaunchScreen.storyboard */,
+				25D858F21D51E51F00BE883B /* SCMain.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		25D89EA91D58BFE900131BDB /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				25D858DE1D51E49D00BE883B /* AppDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		25D89EAA1D58BFFB00131BDB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				25D858F41D51E64400BE883B /* SCCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		44870B57A5C4BE00B560722B /* Pods */ = {
@@ -276,14 +300,14 @@
 			files = (
 				25D28FE11D5318F50025BF28 /* SCRestKitManager.swift in Sources */,
 				25D28FE31D5319090025BF28 /* SCRequestHelper.swift in Sources */,
+				25D89EA61D58BF7C00131BDB /* SCPlayerVC.swift in Sources */,
+				259B09801D54CDBD00DF5059 /* _SCTracks.swift in Sources */,
 				25D858DF1D51E49D00BE883B /* AppDelegate.swift in Sources */,
 				25D858F51D51E64400BE883B /* SCCell.swift in Sources */,
 				25D858F11D51E4F300BE883B /* SCMainVC.swift in Sources */,
 				25D28FE71D531A2E0025BF28 /* SoundCloud.xcdatamodeld in Sources */,
-				25D28FEC1D531BE20025BF28 /* SCLogin.swift in Sources */,
-				25D28FED1D531BE20025BF28 /* _SCLogin.swift in Sources */,
-				25D28FF01D531E760025BF28 /* SCRegistration.swift in Sources */,
 				25D28FF31D5320A10025BF28 /* Constaints.swift in Sources */,
+				259B097F1D54CDBD00DF5059 /* SCTracks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
