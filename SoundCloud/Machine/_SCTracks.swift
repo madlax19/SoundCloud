@@ -11,6 +11,7 @@ public enum SCTracksAttributes: String {
     case genre = "genre"
     case streamUrl = "streamUrl"
     case title = "title"
+    case userId = "userId"
 }
 
 public class _SCTracks: NSManagedObject {
@@ -55,6 +56,9 @@ public class _SCTracks: NSManagedObject {
 
     @NSManaged public
     var title: String?
+
+    @NSManaged public
+    var userId: String?
 
     // MARK: - Relationships
 

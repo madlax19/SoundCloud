@@ -9,14 +9,37 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
-class SCMainVC: UICollectionViewController {
-    var track = [SCTracks]()
+
+var track: SCTracks?
+
+class SCMainVC: UICollectionViewController, NSFetchedResultsControllerDelegate {
+    //var track = [SCTracks]()
+    var track: SCTracks?
     var audioPlayer: AVPlayer?
     var audioItem: AVPlayerItem?
     var playerIndexPath: Int?
+    let trackManager : SCTracks! = nil
     
-
+    lazy var fetchResultController: NSFetchedResultsController = {
+        let moc : NSManagedObjectContext = SCRestKitManager.sharedManager.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName: SCTracks.entityName())
+        let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        fetchRequest.predicate = NSPredicate(format: "userId=%@", track)
+        
+        var fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        
+        do {
+            try fetchResultController.performFetch()
+        } catch {
+            print(error)
+        }
+        return fetchResultController
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchTrack()
@@ -25,23 +48,24 @@ class SCMainVC: UICollectionViewController {
     @objc private func fetchTrack(){
         SCRequestHelper.trackRequest({
             self.track += $0
+            SCRestKitManager.saveContext()
             self.collectionView?.reloadData()
             }, failed: {
                 print("error")
         })
     }
-    
+
 }
 
 
 extension SCMainVC {
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return track.count
+        return (self.fetchResultController.fetchedObjects?.count)!
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! SCCell
-        cell.setupCell(track[indexPath.row])
+        cell.setupCell((self.fetchResultController.fetchedObjects?.first as? SCTracks)!)
         return cell
     }
     

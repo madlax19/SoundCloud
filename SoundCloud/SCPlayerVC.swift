@@ -11,6 +11,7 @@ import AVFoundation
 import AVKit
 
 class SCPlayerVC: UIViewController {
+    
     private var avPlayer: AVPlayer?
     private var avItem: AVPlayerItem?
     private var currentSeconds: Float = 0.0
@@ -30,10 +31,11 @@ class SCPlayerVC: UIViewController {
         super.viewDidLoad()
         trackName.text = track?.title
         durationLabel.text = "00 : 00"
-        if track?.streamUrl != nil{
+        if track?.streamUrl != nil {
             musicParametrs(track!.streamUrl! + "?client_id=\(Constaints.Path.clientId)")
-        }else{
+        } else {
             let alert = UIAlertController(title: "No podcast", message: "This user not have podcast", preferredStyle: .Alert)
+            
             let alertAction = UIAlertAction(title: "OK", style: .Default, handler: {
                 action in self.closeVC()
             })

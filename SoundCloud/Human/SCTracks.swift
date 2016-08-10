@@ -13,7 +13,8 @@ public class SCTracks: _SCTracks {
             mapping.addAttributeMappingsFromDictionary([
                 "created_at" : "createdAt",
                 "stream_url" : "streamUrl",
-                "artwork_url" : "artworkUrl"
+                "artwork_url" : "artworkUrl",
+                "user_id" : "userId"
                 ])
             map = mapping
         })

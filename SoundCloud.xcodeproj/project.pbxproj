@@ -131,17 +131,15 @@
 		25D858DD1D51E49D00BE883B /* SoundCloud */ = {
 			isa = PBXGroup;
 			children = (
+				25DE8D261D5B78640054F9AC /* CoreData */,
 				25D89EA91D58BFE900131BDB /* Delegate */,
 				25D28FF11D5320810025BF28 /* Constaints */,
 				25D28FE41D53190D0025BF28 /* RestKit */,
 				25D89EA81D58BFDD00131BDB /* Storyboard */,
 				25D89EA41D58BF5500131BDB /* ViewController */,
-				259B097B1D54CDBD00DF5059 /* Human */,
-				259B097D1D54CDBD00DF5059 /* Machine */,
 				25D89EAA1D58BFFB00131BDB /* Cell */,
 				25C523921D59C11D00FB5B61 /* Helper */,
 				25D858E51D51E49E00BE883B /* Assets.xcassets */,
-				25D28FE51D531A2E0025BF28 /* SoundCloud.xcdatamodeld */,
 				25D858EA1D51E49E00BE883B /* Info.plist */,
 			);
 			path = SoundCloud;
@@ -179,6 +177,16 @@
 				25D858F41D51E64400BE883B /* SCCell.swift */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		25DE8D261D5B78640054F9AC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				25D28FE51D531A2E0025BF28 /* SoundCloud.xcdatamodeld */,
+				259B097D1D54CDBD00DF5059 /* Machine */,
+				259B097B1D54CDBD00DF5059 /* Human */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		44870B57A5C4BE00B560722B /* Pods */ = {

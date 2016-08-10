@@ -7,8 +7,9 @@
         <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="streamUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Tracks" positionX="-63" positionY="-27" width="128" height="135"/>
+        <element name="Tracks" positionX="-63" positionY="-27" width="128" height="150"/>
     </elements>
 </model>

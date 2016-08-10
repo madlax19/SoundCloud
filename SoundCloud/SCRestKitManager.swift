@@ -10,9 +10,11 @@ import UIKit
 import RestKit
 
 class SCRestKitManager: NSObject {
+    
     let baseURL = (NSBundle.mainBundle().objectForInfoDictionaryKey("APP_SERVER") as! String)
     
     static let sharedManager = SCRestKitManager()
+    
     var managedObjectContext: NSManagedObjectContext {
         get {
             return RKManagedObjectStore.defaultStore().mainQueueManagedObjectContext
@@ -26,12 +28,13 @@ class SCRestKitManager: NSObject {
         RKlcl_configure_by_name("RestKit/Network", RKlcl_vTrace.rawValue);
         let managedObjectStore = RKManagedObjectStore(managedObjectModel: NSManagedObjectModel.mergedModelFromBundles(nil))
         managedObjectStore.createPersistentStoreCoordinator()
-        do {
+            do {
             _ = try managedObjectStore.addSQLitePersistentStoreAtPath(pathToPersistentStore, fromSeedDatabaseAtPath: nil,  withConfiguration:nil,  options:nil);
         } catch {
             print(error)
         }
         RKLogConfigureFromEnvironment()
+        
         managedObjectStore.createManagedObjectContexts()
         managedObjectStore.managedObjectCache = RKInMemoryManagedObjectCache(managedObjectContext: managedObjectStore.persistentStoreManagedObjectContext)
         
@@ -44,5 +47,13 @@ class SCRestKitManager: NSObject {
         
         RKObjectManager.setSharedManager(manager)
 
+    }
+    
+    class func saveContext() {
+        do {
+            try RKManagedObjectStore.defaultStore().mainQueueManagedObjectContext.saveToPersistentStore()
+        } catch {
+            print("Saving context error: \(error)")
+        }
     }
 }
