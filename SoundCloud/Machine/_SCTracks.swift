@@ -5,7 +5,10 @@ import Foundation
 import CoreData
 
 public enum SCTracksAttributes: String {
+    case artworkUrl = "artworkUrl"
     case createdAt = "createdAt"
+    case duration = "duration"
+    case genre = "genre"
     case streamUrl = "streamUrl"
     case title = "title"
 }
@@ -36,7 +39,16 @@ public class _SCTracks: NSManagedObject {
     // MARK: - Properties
 
     @NSManaged public
+    var artworkUrl: String?
+
+    @NSManaged public
     var createdAt: String?
+
+    @NSManaged public
+    var duration: NSNumber?
+
+    @NSManaged public
+    var genre: String?
 
     @NSManaged public
     var streamUrl: String?

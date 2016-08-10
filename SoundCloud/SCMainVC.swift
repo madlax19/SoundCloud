@@ -14,9 +14,8 @@ class SCMainVC: UICollectionViewController {
     var track = [SCTracks]()
     var audioPlayer: AVPlayer?
     var audioItem: AVPlayerItem?
-    var block: ((AVPlayerLayer) -> ())?
+    var playerIndexPath: Int?
     
-    static let sharedInstance = SCMainVC()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +31,6 @@ class SCMainVC: UICollectionViewController {
         })
     }
     
-
 }
 
 
@@ -44,14 +42,12 @@ extension SCMainVC {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! SCCell
         cell.setupCell(track[indexPath.row])
-        block = {
-            cell.layer.addSublayer($0)
-        }
         return cell
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("PlayerId") as! SCPlayerVC
+        vc.track = track[indexPath.row]
         presentViewController(vc, animated: true, completion: nil)
     }
 }

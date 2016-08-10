@@ -9,9 +9,11 @@ public class SCTracks: _SCTracks {
     class func mappingInStore(managedObjectStore: RKManagedObjectStore) -> RKEntityMapping {
         dispatch_once(&onceToken, {
             let mapping = RKEntityMapping(forEntityForName: SCTracks.entityName(), inManagedObjectStore: managedObjectStore)
-            mapping.addAttributeMappingsFromDictionary(["title" : "title",
+            mapping.addAttributeMappingsFromArray(["duration", "genre", "title"])
+            mapping.addAttributeMappingsFromDictionary([
                 "created_at" : "createdAt",
-                "stream_url" : "streamUrl"
+                "stream_url" : "streamUrl",
+                "artwork_url" : "artworkUrl"
                 ])
             map = mapping
         })
