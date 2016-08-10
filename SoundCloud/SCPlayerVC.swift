@@ -30,10 +30,20 @@ class SCPlayerVC: UIViewController {
         super.viewDidLoad()
         trackName.text = track?.title
         durationLabel.text = "00 : 00"
-        musicParametrs(track!.streamUrl! + "?client_id=\(Constaints.Path.clientId)")
+        if track?.streamUrl != nil{
+            musicParametrs(track!.streamUrl! + "?client_id=\(Constaints.Path.clientId)")
+        }else{
+            let alert = UIAlertController(title: "No podcast", message: "This user not have podcast", preferredStyle: .Alert)
+            let alertAction = UIAlertAction(title: "OK", style: .Default, handler: {
+                action in self.closeVC()
+            })
+            alert.addAction(alertAction)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
         setImageWidthUrl()
         playerObserver()
         addNavigationBar()
+        genreSetUp()
     }
     
     func addNavigationBar() {
@@ -70,12 +80,16 @@ class SCPlayerVC: UIViewController {
     }
     
     func genreSetUp() {
-        for item in  SCGenreManager.sharedInstance.addHashtagToGenre(genre: (track?.genre)!){
-            if item == SCGenreManager.sharedInstance.addHashtagToGenre(genre: (track?.genre)!).first{
-                genreLable.text = "\(item)"
-            }else {
-                genreLable.text = " \(item)"
+        if track?.genre != nil{
+            var genreL = ""
+            for item in  SCGenreManager.sharedInstance.addHashtagToGenre(genre: (track?.genre)!){
+                if item == SCGenreManager.sharedInstance.addHashtagToGenre(genre: (track?.genre)!).first{
+                    genreL += item
+                }else {
+                    genreL += " \(item)"
+                }
             }
+            genreLable.text = genreL
         }
     }
     

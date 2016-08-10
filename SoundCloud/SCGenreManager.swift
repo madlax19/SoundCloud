@@ -17,7 +17,9 @@ class SCGenreManager: NSData {
             let genreArr = genre.componentsSeparatedByString(" ")
             var genreHashTagArr: [String] = []
             for genreItem in genreArr {
-                genreHashTagArr.append("#\(genreItem)")
+                if genreItem != "&"{
+                    genreHashTagArr.append("#\(genreItem)")
+                }
             }
             return genreHashTagArr
         }

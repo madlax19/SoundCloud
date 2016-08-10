@@ -16,7 +16,9 @@ class SCCell: UICollectionViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var trackImageView: UIImageView!
     func setupCell(track : SCTracks) {
-        titleLabel.text = track.title
+        if let title = track.title{
+            titleLabel.text = title
+        }
         if let imageUrl = track.artworkUrl{
             trackImageView.sd_setImageWithURL(NSURL(string: imageUrl))
         }else{
